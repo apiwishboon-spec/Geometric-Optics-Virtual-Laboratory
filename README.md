@@ -1,195 +1,121 @@
 # Geometric Optics Virtual Laboratory
 
-An interactive browser-based simulation for exploring **geometric optics**. This virtual lab lets you experiment with convex and concave lenses, visualize ray tracing in real time, and observe how image properties change as you adjust physical parameters.
+Interactive simulation for exploring **thin lens physics** using real-time ray tracing.
 
-Built for students, educators, and curious minds who want to *see physics think*.
+**Live Demo:**
+https://apiwishboon-spec.github.io/Geometric-Optics-Virtual-Laboratory/
 
 ---
 
 ## Overview
 
-This project simulates thin-lens imaging using the **Gaussian lens formula**:
+The Geometric Optics Virtual Laboratory is a browser-based simulation that allows students and educators to experiment with **convex and concave lenses** and observe image formation dynamically.
 
-[
+The simulation uses the **Gaussian thin lens equation**:
+
 1/f = 1/u + 1/v
-]
 
-Adjust object distance, focal length, and object height to observe how the image changes. The simulation dynamically renders:
+and calculates magnification:
 
-* Principal rays
-* Image position and size
-* Real vs virtual behavior
-* Magnification and orientation
+M = −v/u
 
-The goal: turn abstract equations into visual intuition.
+All results update instantly as parameters change.
 
 ---
 
 ## Features
 
-**Lens Modes**
+* Convex and concave lens modes
+* Real-time ray tracing visualization
+* Adjustable parameters:
 
-* Convex lens
-* Concave lens
+  * Focal length (f)
+  * Object distance (u)
+  * Object height (h)
+* Displays calculated values:
 
-**Interactive Controls**
+  * Image distance (v)
+  * Magnification (M)
+  * Image height
+  * Image type (Real / Virtual)
+  * Orientation (Upright / Inverted)
+  * Size (Reduced / Magnified)
+* Drag-and-drop interaction:
 
-* Adjustable focal length
-* Adjustable object distance
-* Adjustable object height
-* Drag-and-drop object positioning
-* Drag focal points directly on canvas
-
-**Real-Time Physics**
-
-* Instant image distance calculation
-* Magnification display
-* Image height calculation
-* Property indicators:
-
-  * Real / Virtual
-  * Upright / Inverted
-  * Magnified / Reduced
-
-**Visualization**
-
-* Principal axis and coordinate grid
-* Accurate ray tracing:
-
-  * Parallel ray → through focal point
-  * Central ray → straight through
-  * Focal ray → exits parallel (convex)
-* Dashed extensions for virtual images
-
-**Extras**
-
-* One-click demo mode
-* Reset controls
-* Live coordinate display
-* Responsive layout
-* Touch support for mobile/tablet
+  * Move object (candle)
+  * Adjust focal points directly
+* One-click demonstration mode
+* Responsive canvas rendering
+* No backend required
 
 ---
 
-## How It Works
+## How to Use
 
-The simulation uses the **thin lens equation**:
+1. Select **Convex** or **Concave** lens.
+2. Adjust parameters using sliders, or:
 
-```
-v = (f × u) / (u − f)
-Magnification (M) = −v / u
-Image height = |M| × object height
-```
+   * Drag the candle to change object distance
+   * Drag focal markers to change focal length
+3. Observe:
 
-Convex lens behavior:
+   * Ray paths
+   * Image position and size
+   * Image properties updating in real time
 
-* Object beyond 2f → real, reduced, inverted
-* Between f and 2f → real, magnified, inverted
-* Inside f → virtual, upright
+### Physics Behavior
 
-Concave lens behavior:
+**Convex Lens**
 
-* Always virtual
-* Always upright
-* Always reduced
+* Object beyond 2f → real, reduced image
+* Object between f and 2f → real, magnified image
+* Object inside f → virtual, upright image
 
-Canvas rendering updates continuously as parameters change.
+**Concave Lens**
 
----
-
-## Controls
-
-* **Drag the orange object** to change object distance
-* **Drag focal markers** to change focal length
-* Use sliders for precise adjustments
-* Switch between **convex** and **concave**
-* Click **Reset** to return to default values
-* Click **Help** for quick physics guidance
+* Always produces a **virtual, upright, reduced** image.
 
 ---
 
-## Tech Stack
+## Technology
 
 * HTML5 Canvas
 * Vanilla JavaScript
 * Tailwind CSS (CDN)
-* Google Fonts:
-
-  * Space Grotesk
-  * JetBrains Mono
-
-No frameworks. No build step. Just open and run.
+* Google Fonts
+* Pure client-side rendering (no server)
 
 ---
 
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/geometric-optics-lab.git
-```
-
-Open the project:
-
-```bash
-cd geometric-optics-lab
-```
-
-Then open:
+## Project Structure
 
 ```
 index.html
+README.md
+LICENSE
 ```
 
-in your browser.
-
-That’s it. Zero dependencies. Physics at the speed of curiosity.
-
 ---
 
-## Use Cases
+## Educational Purpose
 
-* Physics classroom demonstrations
-* Self-study for optics
-* Concept visualization for students
-* Interactive teaching tool
-* Science outreach or exhibitions
+This project is designed as a **visual learning tool** for:
 
----
-
-## Accessibility
-
-* Reduced motion support for users with motion sensitivity
-* Touch interaction for mobile devices
-* Responsive layout for different screen sizes
+* High school physics
+* Introductory optics courses
+* STEM demonstrations
+* Self-study and experimentation
 
 ---
 
 ## License
 
-MIT License
-
-© 2026
-
----
-
-## Future Ideas
-
-* Mirror simulations
-* Multiple lens systems
-* Wave optics mode
-* Measurement tools
-* Export snapshots
-* Classroom preset scenarios
+This project is licensed under the **MIT License**.
+See the `LICENSE` file for details.
 
 ---
 
-## Why This Exists
+## Author
 
-Equations tell you *what* happens.
-Visualization tells you *why*.
-
-When the rays move and the image flips in front of your eyes, geometric optics stops being math and starts being intuition.
-
-Physics is a visual language. This lab is a translator.
+Created by Boon
+Open for learning, modification, and experimentation.
